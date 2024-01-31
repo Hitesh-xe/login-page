@@ -1,0 +1,93 @@
+body {
+  font-family: Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+    to top right,
+    rgb(141, 248, 246),
+    rgb(243, 193, 255)
+  );
+  position: relative;
+}
+.container {
+  height: 28rem;
+  width: 25rem;
+  background-color: aliceblue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2rem;
+  font-family: inherit;
+  opacity: 100;
+}
+h1 {
+  text-align: center;
+  padding: 1rem;
+}
+.login,
+.login-roll {
+  display: block;
+  margin: 2rem auto;
+  width: 70%;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  background-color: rgb(228, 228, 228);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: rgb(0, 0, 0);
+}
+.btn-log {
+  margin: 3rem auto;
+  display: block;
+  padding: 1rem 1.8rem;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: rgb(0, 0, 0);
+  border: none;
+  background-image: linear-gradient(
+    to top right,
+    rgb(141, 248, 246),
+    rgb(243, 193, 255)
+  );
+  border-radius: 1rem;
+}
+.fee-box-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+    to top right,
+    rgb(141, 248, 246),
+    rgb(243, 193, 255)
+  );
+}
+.hidden {
+  opacity: 0;
+  z-index: -1;
+}
+.heading {
+  margin: 4rem 0;
+  text-align: center;
+  padding: 1rem;
+  font-family: inherit;
+  text-decoration: underline;
+}
+.total-coll {
+  display: inline;
+}
+table {
+  width: 100%;
+}
+td {
+  padding: 1rem;
+}

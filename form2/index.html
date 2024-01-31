@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Student login</h1>
+      <input type="text"class="login" placeholder="Name" />
+      <input type="text" class="login-roll"placeholder="Roll Number" />
+      <button class="btn-log">Login</button>
+    </div>
+    <div class="fee-box-container hidden">
+      <h2><u>Student-Name</u><label class="name"></label></h2>
+      <h2><u>Roll--Number</u> : 22JN1A0559</h2>
+      <h2 class="heading">FEE DETAILS</h1>
+        <table>
+          <tr>
+            <th><u>Fee-Type</u></th>
+            <th><u>Total-Fee</u></th>
+            <th><u>Paid</u></th>
+            <th><u>Balance</u></th>
+          </tr>
+          <tr>
+            <td>college fee--</td>
+            <td id="total-fee">Rs.85,000</td>
+            <td id="paid"><input type="text"></td>
+            <td id="balance"></td>
+          </tr>
+          <tr>
+            <td>transport fee--</td>
+            <td id="total-fee">Rs.20,000</td>
+            <td id="paid"><input type="text"></td>
+            <td id="balance"></td>
+          </tr>
+          <tr>
+            <td>University fee--</td>
+            <td id="total-fee">Rs.4,500</td>
+            <td id="paid"><input type="text"></td>
+            <td id="balance"></td>
+          </tr>
+        </table>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
