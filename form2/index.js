@@ -5,13 +5,13 @@ const student1 = {
   amount: "85,000",
 };
 const student2 = {
-  student: "CH.SAIdEEPAK",
+  student: "CH.SAIDEEPAK",
   rollno: "22JN1A0527",
   amount: "35,000",
 };
 const student3 = {
   student: "D.VARUN",
-  rollno: "22jN1A0538",
+  rollno: "22JN1A0538",
   amount: "80,000",
 };
 const students = [student1, student2, student3];
@@ -20,10 +20,12 @@ const roll = document.querySelector(".login-roll");
 const fee = document.querySelector(".fee-box-container");
 const btn = document.querySelector(".btn-log");
 const cont = document.querySelector(".container");
+const Name = document.querySelector(".name");
+const number = document.querySelector(".number");
 const username = function (studs) {
   studs.forEach(function (acc) {
-    acc.username = acc.student.toUpperCase();
-    console.log(acc.username);
+    acc.Username = acc.student.toUpperCase();
+    console.log(acc.Username);
   });
 };
 username(students);
@@ -36,10 +38,13 @@ const rollnum = function (roll) {
 rollnum(students);
 let currentuser;
 btn.addEventListener("click", function () {
-  currentuser = students.find((acc) => acc.username === login.value);
+  currentuser = students.find((acc) => acc.Username === login.value);
+  console.log(currentuser);
   if (currentuser?.rollno === roll.value) {
     fee.classList.remove("hidden");
     cont.style.opacity = 0;
+    Name.textContent = currentuser.student;
+    number.textContent = currentuser.rollnum;
     // displayfee(currentuser);
   }
 });
