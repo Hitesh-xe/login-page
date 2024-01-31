@@ -91,3 +91,6 @@ table {
 td {
   padding: 1rem;
 }
+th {
+  padding-right: 10rem;
+}
