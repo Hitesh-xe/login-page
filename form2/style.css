@@ -63,13 +63,14 @@ h1 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 90vw;
   height: 100vh;
   background-image: linear-gradient(
     to top right,
     rgb(141, 248, 246),
     rgb(243, 193, 255)
   );
+  padding: 2rem;
 }
 .hidden {
   opacity: 0;
@@ -89,8 +90,14 @@ table {
   width: 100%;
 }
 td {
-  padding: 1rem;
+  padding: 1rem 3rem;
+  border: 1px solid black;
+  text-align: center;
 }
 th {
-  padding-right: 10rem;
+  border: 1px solid black;
+  /* padding-right: 10rem; */
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
 }
