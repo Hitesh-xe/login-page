@@ -2,24 +2,24 @@
 const student1 = {
   student: "K.V.HITESH",
   rollno: "22JN1A0559",
-  coll: "₹ 85,000",
-  trans: "₹ 20,000",
-  uni: "₹ 4,500",
+  coll: 85000,
+  trans: 20000,
+  uni: 4500,
 };
 const student2 = {
   student: "CH.SAIDEEPAK",
   rollno: "22JN1A0527",
-  coll: "₹ 35,000",
-  trans: "₹ 19,000",
-  uni: "₹ 4,500",
+  coll: 35000,
+  trans: 19000,
+  uni: 4500,
   // amount: [35000, 18000, 4500],
 };
 const student3 = {
   student: "D.VARUN DONESH",
   rollno: "22JN1A0538",
-  coll: "₹ 80,000",
-  trans: "₹ 18,000",
-  uni: "₹ 4,500",
+  coll: 80000,
+  trans: 18000,
+  uni: 4500,
   // amount: [80000, 19000, 4500],
 };
 const students = [student1, student2, student3];
@@ -34,6 +34,14 @@ const college = document.querySelector(".college-fee");
 const trans = document.querySelector(".trans-fee");
 const uni = document.querySelector(".uni-fee");
 const table = document.querySelector(".total-fee-box");
+const input1 = document.querySelector(".input1");
+const input2 = document.querySelector(".input2");
+const input3 = document.querySelector(".input3");
+const collbal = document.querySelector(".coll-balance");
+const transbal = document.querySelector(".trans-balance");
+const unibal = document.querySelector(".uni-balance");
+const submit = document.querySelector(".sub");
+const remaining = document.querySelector(".remaining");
 const username = function (studs) {
   studs.forEach(function (acc) {
     acc.Username = acc.student.toUpperCase();
@@ -91,3 +99,20 @@ btn.addEventListener("click", function () {
 //     <h2><u>Roll--Number</u> : ${currentuser.rollno}</h2>`;
 //   fee.insertAdjacentHTML("afterbegin", html);
 // };
+console.log(typeof student1.coll);
+submit.addEventListener("click", function (e) {
+  const collnum = Number(input1.value);
+  const transnum = Number(input2.value);
+  const uninum = Number(input3.value);
+  function calculate(num1, num2, num3) {
+    currentuser.coll -= num1;
+    currentuser.trans -= num2;
+    currentuser.uni -= num3;
+    collbal.textContent = currentuser.coll;
+    transbal.textContent = currentuser.trans;
+    unibal.textContent = currentuser.uni;
+    const remain = currentuser.coll + currentuser.trans + currentuser.uni;
+    remaining.textContent = remain;
+  }
+  calculate(collnum, transnum, uninum);
+});
