@@ -22,7 +22,15 @@ const student3 = {
   uni: 4500,
   // amount: [80000, 19000, 4500],
 };
-const students = [student1, student2, student3];
+const student4 = {
+  student: "G.YASASWY",
+  rollno: "22JN1A0550",
+  coll: 35000,
+  trans: 20000,
+  uni: 4500,
+  // amount: [80000, 19000, 4500],
+};
+const students = [student1, student2, student3, student4];
 const login = document.querySelector(".login");
 const roll = document.querySelector(".login-roll");
 const fee = document.querySelector(".fee-box-container");
@@ -31,16 +39,17 @@ const cont = document.querySelector(".container");
 const Name = document.querySelector(".name");
 const number = document.querySelector(".number");
 const college = document.querySelector(".college-fee");
-const trans = document.querySelector(".trans-fee");
-const uni = document.querySelector(".uni-fee");
+const transpo = document.querySelector(".trans-fee");
+const univer = document.querySelector(".uni-fee");
 const table = document.querySelector(".total-fee-box");
+const inputs = document.querySelector(".inputs");
 const input1 = document.querySelector(".input1");
 const input2 = document.querySelector(".input2");
 const input3 = document.querySelector(".input3");
 const collbal = document.querySelector(".coll-balance");
 const transbal = document.querySelector(".trans-balance");
 const unibal = document.querySelector(".uni-balance");
-const submit = document.querySelector(".sub");
+const show = document.querySelector(".show-bal");
 const remaining = document.querySelector(".remaining");
 const username = function (studs) {
   studs.forEach(function (acc) {
@@ -81,11 +90,12 @@ btn.addEventListener("click", function () {
   if (currentuser?.rollno === roll.value) {
     fee.classList.remove("hidden");
     cont.style.opacity = 0;
+
     Name.textContent = currentuser.student;
     number.textContent = currentuser.rollnum;
     college.textContent = currentuser.coll;
-    trans.textContent = currentuser.trans;
-    uni.textContent = currentuser.uni;
+    transpo.textContent = currentuser.trans;
+    univer.textContent = currentuser.uni;
     // feetotal(currentuser.amount);
     // displayfee(currentuser);
   }
@@ -100,7 +110,7 @@ btn.addEventListener("click", function () {
 //   fee.insertAdjacentHTML("afterbegin", html);
 // };
 console.log(typeof student1.coll);
-submit.addEventListener("click", function (e) {
+show.addEventListener("click", function (e) {
   const collnum = Number(input1.value);
   const transnum = Number(input2.value);
   const uninum = Number(input3.value);
@@ -108,11 +118,35 @@ submit.addEventListener("click", function (e) {
     currentuser.coll -= num1;
     currentuser.trans -= num2;
     currentuser.uni -= num3;
-    collbal.textContent = currentuser.coll;
-    transbal.textContent = currentuser.trans;
-    unibal.textContent = currentuser.uni;
-    const remain = currentuser.coll + currentuser.trans + currentuser.uni;
-    remaining.textContent = remain;
+    if (
+      currentuser.coll >= 0 &&
+      currentuser.trans >= 0 &&
+      currentuser.uni >= 0
+    ) {
+      collbal.textContent = currentuser.coll;
+      transbal.textContent = currentuser.trans;
+      unibal.textContent = currentuser.uni;
+      const remain = currentuser.coll + currentuser.trans + currentuser.uni;
+      remaining.textContent = remain;
+    } else {
+      console.log(
+        window.alert(
+          "Please Refresh your page and Enter correct amount you have paid"
+        )
+      );
+      // collbal.value = college.value;
+      // transbal.textContent = currentuser.trans;
+      // unibal.textContent = currentuser.uni;
+      // inputs.value = "";
+      // fee.classList.add("hidden");
+      // cont.style.opacity = 100;
+
+      // const remain = currentuser.coll + currentuser.trans + currentuser.uni;
+      // remaining.textContent = remain;
+    }
   }
   calculate(collnum, transnum, uninum);
 });
+function submit() {
+  window.alert("Successfully Submitted 🎉");
+}
