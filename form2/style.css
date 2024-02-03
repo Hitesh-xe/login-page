@@ -120,9 +120,11 @@ th {
 .inline {
   display: inline;
 }
-.sub {
+.show-bal {
+  margin-left: 30rem;
   padding: 0.5rem;
 }
 .submit {
-  margin-left: 30rem;
+  margin-left: 5rem;
+  padding: 0.5rem;
 }
