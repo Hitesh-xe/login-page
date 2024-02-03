@@ -21,28 +21,33 @@
           <tr>
             <th><u>Fee-Type</u></th>
             <th><u>Total-Fee</u></th>
-            <th><u>Paid</u></th>
+            <th><u>Amount Paid</u></th>
             <th><u>Balance</u></th>
           </tr>
           <tr>
-            <td>college fee--</td>
-            <td id="total-fee"><label class="college-fee">0000</label></td>
-            <td id="paid"><input type="text"></td>
-            <td id="balance"></td>
+            <td>college fee</td>
+            <td id="total-fee">₹ <label class="college-fee"> </label></td>
+            <td id="paid">₹<input type="text" class="inputs input1" size="5"></td>
+            <td id="balance">₹<label class="coll-balance"> </label></td>
           </tr>
           <tr>
-            <td>transport fee--</td>
-            <td id="total-fee"><label class="trans-fee"></label></td>
-            <td id="paid"><input type="text"></td>
-            <td id="balance"></td>
+            <td>transport fee</td>
+            <td id="total-fee">₹ <label class="trans-fee"> </label></td>
+            <td id="paid">₹<input type="text" class="inputs input2"size="5"></td>
+            <td id="balance">₹<label class="trans-balance"> </label></td>
           </tr>
           <tr>
-            <td>University fee--</td>
-            <td id="total-fee"><label class="uni-fee"></label></td>
-            <td id="paid"><input type="text"></td>
-            <td id="balance"></td>
+            <td>University fee</td>
+            <td id="total-fee">₹ <label class="uni-fee"> </label></td>
+            <td id="paid">₹<input type="text" class="inputs input3"size="5"></td>
+            <td id="balance">₹<label class="uni-balance"> </label></td>
           </tr>
         </table>
+        <br>
+      <div class="total-balance">
+        <h1 class="inline">Total-Balance : ₹ <label class="remaining">  </label></h1>
+      </div>
+        <label class="submit"><button class="sub">Submit</button></label>
     </div>
     <script src="index.js"></script>
   </body>
